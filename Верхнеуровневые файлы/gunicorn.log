@@ -1,0 +1,327 @@
+Starting Gunicorn...
+[2024-06-28 03:52:23 +0300] [28408] [INFO] Starting gunicorn 22.0.0
+[2024-06-28 03:52:23 +0300] [28408] [INFO] Listening at: http://127.0.0.1:8000 (28408)
+[2024-06-28 03:52:23 +0300] [28408] [INFO] Using worker: sync
+[2024-06-28 03:52:23 +0300] [28409] [INFO] Booting worker with pid: 28409
+[2024-06-28 03:53:45 +0300] [28408] [INFO] Handling signal: term
+[2024-06-28 03:53:45 +0300] [28409] [INFO] Worker exiting (pid: 28409)
+[2024-06-28 03:53:45 +0300] [28408] [INFO] Shutting down: Master
+Starting Gunicorn...
+[2024-06-28 03:53:46 +0300] [28517] [INFO] Starting gunicorn 22.0.0
+[2024-06-28 03:53:46 +0300] [28517] [INFO] Listening at: http://127.0.0.1:10000 (28517)
+[2024-06-28 03:53:46 +0300] [28517] [INFO] Using worker: sync
+[2024-06-28 03:53:46 +0300] [28518] [INFO] Booting worker with pid: 28518
+[2024-06-28 03:54:45,686] ERROR in app: Exception on /books/my_reviews [GET]
+Traceback (most recent call last):
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/books.py", line 332, in my_reviews
+    pagination = book_reviews.paginate(page, 5)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.paginate() takes 1 positional argument but 3 were given
+[2024-06-28 03:58:14,021] ERROR in app: Exception on /books/my_reviews [GET]
+Traceback (most recent call last):
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/books.py", line 332, in my_reviews
+    pagination = book_reviews.paginate(page=page, per_page=5)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.paginate() takes 1 positional argument but 3 were given
+[2024-06-28 03:58:51 +0300] [28517] [INFO] Handling signal: term
+[2024-06-28 03:58:51 +0300] [28518] [INFO] Worker exiting (pid: 28518)
+[2024-06-28 03:58:51 +0300] [28517] [INFO] Shutting down: Master
+Starting Gunicorn...
+[2024-06-28 03:58:52 +0300] [28847] [INFO] Starting gunicorn 22.0.0
+[2024-06-28 03:58:52 +0300] [28847] [INFO] Listening at: http://127.0.0.1:10000 (28847)
+[2024-06-28 03:58:52 +0300] [28847] [INFO] Using worker: sync
+[2024-06-28 03:58:52 +0300] [28848] [INFO] Booting worker with pid: 28848
+[2024-06-28 04:01:30 +0300] [28847] [INFO] Handling signal: term
+[2024-06-28 04:01:30 +0300] [28848] [INFO] Worker exiting (pid: 28848)
+[2024-06-28 04:01:30 +0300] [28847] [INFO] Shutting down: Master
+Starting Gunicorn...
+[2024-06-28 04:01:32 +0300] [29012] [INFO] Starting gunicorn 22.0.0
+[2024-06-28 04:01:32 +0300] [29012] [INFO] Listening at: http://127.0.0.1:10000 (29012)
+[2024-06-28 04:01:32 +0300] [29012] [INFO] Using worker: sync
+[2024-06-28 04:01:32 +0300] [29013] [INFO] Booting worker with pid: 29013
+[2024-06-28 04:03:10 +0300] [29012] [INFO] Handling signal: term
+[2024-06-28 04:03:10 +0300] [29013] [INFO] Worker exiting (pid: 29013)
+[2024-06-28 04:03:10 +0300] [29012] [INFO] Shutting down: Master
+Starting Gunicorn...
+[2024-06-28 04:03:11 +0300] [29118] [INFO] Starting gunicorn 22.0.0
+[2024-06-28 04:03:12 +0300] [29118] [INFO] Listening at: http://127.0.0.1:10000 (29118)
+[2024-06-28 04:03:12 +0300] [29118] [INFO] Using worker: sync
+[2024-06-28 04:03:12 +0300] [29119] [INFO] Booting worker with pid: 29119
+[2024-06-28 23:03:44,562] ERROR in app: Exception on /collections/ [GET]
+Traceback (most recent call last):
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/auth.py", line 48, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/collections_books.py", line 24, in index
+    user_collections = Collection.query.filter_by(user_id=user_id).paginate(page, 4)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.paginate() takes 1 positional argument but 3 were given
+[2024-06-28 23:08:46,059] ERROR in app: Exception on /collections/ [GET]
+Traceback (most recent call last):
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/auth.py", line 48, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/collections_books.py", line 24, in index
+    user_collections = Collection.query.filter_by(user_id=user_id).paginate(page, 4)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.paginate() takes 1 positional argument but 3 were given
+[2024-06-28 23:08:51,800] ERROR in app: Exception on /collections/ [GET]
+Traceback (most recent call last):
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/auth.py", line 48, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/collections_books.py", line 24, in index
+    user_collections = Collection.query.filter_by(user_id=user_id).paginate(page, 4)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.paginate() takes 1 positional argument but 3 were given
+[2024-06-28 23:12:57,948] ERROR in app: Exception on /collections/ [GET]
+Traceback (most recent call last):
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/auth.py", line 48, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/collections_books.py", line 24, in index
+    user_collections = Collection.query.filter_by(user_id=user_id).paginate(page, 4)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.paginate() takes 1 positional argument but 3 were given
+[2024-06-29 11:20:38,541] ERROR in app: Exception on /collections/ [GET]
+Traceback (most recent call last):
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/auth.py", line 48, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/collections_books.py", line 24, in index
+    user_collections = Collection.query.filter_by(user_id=user_id).paginate(page, 4)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.paginate() takes 1 positional argument but 3 were given
+[2024-06-29 11:20:40,526] ERROR in app: Exception on /collections/ [GET]
+Traceback (most recent call last):
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/auth.py", line 48, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/collections_books.py", line 24, in index
+    user_collections = Collection.query.filter_by(user_id=user_id).paginate(page, 4)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.paginate() takes 1 positional argument but 3 were given
+[2024-06-29 11:21:11,348] ERROR in app: Exception on /collections/ [GET]
+Traceback (most recent call last):
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/auth.py", line 48, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/collections_books.py", line 24, in index
+    user_collections = Collection.query.filter_by(user_id=user_id).paginate(page, 4)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.paginate() takes 1 positional argument but 3 were given
+[2024-07-03 18:42:23,679] ERROR in app: Exception on /collections/ [GET]
+Traceback (most recent call last):
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/auth.py", line 48, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/collections_books.py", line 24, in index
+    user_collections = Collection.query.filter_by(user_id=user_id).paginate(page, 4)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.paginate() takes 1 positional argument but 3 were given
+[2024-07-27 22:53:26 +0300] [29118] [INFO] Handling signal: term
+[2024-07-27 22:53:26 +0300] [29119] [INFO] Worker exiting (pid: 29119)
+[2024-07-27 22:53:27 +0300] [29118] [INFO] Shutting down: Master
+Starting Gunicorn...
+[2024-07-28 02:32:09 +0300] [11] [INFO] Starting gunicorn 22.0.0
+[2024-07-28 02:32:09 +0300] [11] [INFO] Listening at: http://127.0.0.1:10000 (11)
+[2024-07-28 02:32:09 +0300] [11] [INFO] Using worker: sync
+[2024-07-28 02:32:09 +0300] [23] [INFO] Booting worker with pid: 23
+[2024-08-19 14:28:08 +0300] [11] [INFO] Handling signal: term
+[2024-08-19 14:28:08 +0300] [23] [INFO] Worker exiting (pid: 23)
+[2024-08-19 14:28:08 +0300] [11] [INFO] Shutting down: Master
+Starting Gunicorn...
+[2024-08-19 15:05:08 +0300] [11] [INFO] Starting gunicorn 22.0.0
+[2024-08-19 15:05:08 +0300] [11] [INFO] Listening at: http://127.0.0.1:10000 (11)
+[2024-08-19 15:05:08 +0300] [11] [INFO] Using worker: sync
+[2024-08-19 15:05:08 +0300] [23] [INFO] Booting worker with pid: 23
+[2024-09-03 17:34:47 +0300] [11] [INFO] Handling signal: term
+[2024-09-03 17:34:47 +0300] [23] [INFO] Worker exiting (pid: 23)
+[2024-09-03 17:34:47 +0300] [11] [INFO] Shutting down: Master
+Starting Gunicorn...
+[2024-09-04 02:13:53 +0300] [11] [INFO] Starting gunicorn 22.0.0
+[2024-09-04 02:13:53 +0300] [11] [INFO] Listening at: http://127.0.0.1:10000 (11)
+[2024-09-04 02:13:53 +0300] [11] [INFO] Using worker: sync
+[2024-09-04 02:13:53 +0300] [23] [INFO] Booting worker with pid: 23
+[2024-09-27 23:52:31 +0300] [11] [INFO] Handling signal: term
+[2024-09-27 23:52:31 +0300] [23] [INFO] Worker exiting (pid: 23)
+[2024-09-27 23:52:31 +0300] [11] [INFO] Shutting down: Master
+Starting Gunicorn...
+[2024-09-28 00:49:37 +0300] [11] [INFO] Starting gunicorn 22.0.0
+[2024-09-28 00:49:37 +0300] [11] [INFO] Listening at: http://127.0.0.1:10000 (11)
+[2024-09-28 00:49:37 +0300] [11] [INFO] Using worker: sync
+[2024-09-28 00:49:37 +0300] [23] [INFO] Booting worker with pid: 23
+[2024-11-12 02:39:39,160] ERROR in app: Exception on /collections/ [GET]
+Traceback (most recent call last):
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/ve/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/auth.py", line 48, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/std/web-dev-2024-2/exam/app/collections_books.py", line 24, in index
+    user_collections = Collection.query.filter_by(user_id=user_id).paginate(page, 4)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.paginate() takes 1 positional argument but 3 were given
